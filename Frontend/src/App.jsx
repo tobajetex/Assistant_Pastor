@@ -38,7 +38,7 @@ export default function AssistantPastorUI() {
     ]);
 
     try {
-      const res = await fetch("http://localhost:3008/api/spiritual", {
+      const res = await fetch("https://assistant-pastor.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
