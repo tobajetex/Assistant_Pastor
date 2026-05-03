@@ -38,15 +38,18 @@ export default function AssistantPastorUI() {
     ]);
 
     try {
-      const res = await fetch("https://assistant-pastor.onrender.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://assistant-pastor.onrender.com/api/spiritual",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userPrompt: text,
+          }),
         },
-        body: JSON.stringify({
-          userPrompt: text,
-        }),
-      });
+      );
 
       const data = await res.json();
 
